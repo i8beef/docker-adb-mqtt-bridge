@@ -1,0 +1,22 @@
+version: '3.2'
+
+services:
+  adb-mqtt-bridge:
+    container_name: adb-mqtt-bridge
+    hostname: adb-mqtt-bridge
+    #image: dotwee/adb-mqtt-bridge:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - MQTT_SERVER=192.168.1.55
+      - MQTT_PORT=1883
+      - MQTT_CLIENT=adb-mqtt-bridge
+      - TOPIC=AdbMqttBridge
+      - USER=YourMQTTUser
+      - PASSWORD=YourMQTTUserPass
+      - ADB_DEVICE=192.168.1.45
+      - POLL_INTERVAL=5
+    volumes:
+      - ./config:/config:rw
+    restart: always
