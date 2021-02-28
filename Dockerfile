@@ -1,5 +1,6 @@
-FROM python:3.6
-LABEL maintainer="Marcel van der Veldt <m.vanderveldt@outlook.com>"
+FROM python:3.9-slim
+LABEL maintainer="Lkas Wolfsteiner <lukas@wolfsteiner.media>"
+LABEL org.opencontainers.image.source=https://github.com/dotWee/docker-adb-mqtt-bridge
 
 ENV LANG C.UTF-8
 
