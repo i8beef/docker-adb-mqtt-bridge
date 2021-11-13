@@ -67,4 +67,4 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_REGISTRY_USERNAME }}
           password: ${{ secrets.DOCKER_REGISTRY_PASSWORD }}
-          repository: dotwee/matrix-synapse-s3
+          repository: dotwee/adb-mqtt-bridge
