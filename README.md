@@ -1,5 +1,14 @@
 # docker-adb-mqtt-bridge
 
+![github status](https://badgen.net/github/status/dotwee/docker-adb-mqtt-bridge?icon=github)
+![github license](https://badgen.net/github/license/dotwee/docker-adb-mqtt-bridge?icon=github)
+![github open pull-requests](https://badgen.net/github/open-prs/dotwee/docker-adb-mqtt-bridge?icon=github&label=open%20pull-requests)
+![github open issues](https://badgen.net/github/open-issues/dotwee/docker-adb-mqtt-bridge?icon=github)
+![docker pulls](https://badgen.net/docker/pulls/dotwee/adb-mqtt-bridge?icon=docker&label=pulls)
+![docker size](https://badgen.net/docker/size/dotwee/adb-mqtt-bridge?icon=docker&label=size)
+
+[![build & push docker image task](https://github.com/dotWee/docker-adb-mqtt-bridge/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/dotWee/docker-adb-mqtt-bridge/actions/workflows/main.yml)
+
 Control Android devices with MQTT using ADB. 
 
 This docker image creates a very basic cli proxy to remote control one or more android devices using MQTT.
