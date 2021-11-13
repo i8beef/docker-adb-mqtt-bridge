@@ -1,6 +1,8 @@
 # docker-adb-mqtt-bridge
 
-Docker image which creates a very basic proxy to remote control an android device using MQTT.  
+Control Android devices with MQTT using ADB. 
+
+This docker image creates a very basic cli proxy to remote control one or more android devices using MQTT.
 
 Based upon [@marcelveldt](https://github.com/marcelveldt)'s initial work on the [docker-image-adb-mqtt-proxy](https://github.com/marcelveldt/docker-image-adb-mqtt-proxy) project.
 
