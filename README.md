@@ -1,9 +1,8 @@
-# docker-adb-mqtt-bridge
+# [`dotwee/adb-mqtt-bridge`](https://hub.docker.com/r/dotwee/adb-mqtt-bridge)
 
 ![github status](https://img.shields.io/github/workflow/status/dotwee/docker-adb-mqtt-bridge/build%20and%20publish%20docker%20image/master?logo=GitHub)
 ![github activity](https://img.shields.io/github/last-commit/dotwee/docker-adb-mqtt-bridge?logo=github)
 ![github open issues](https://badgen.net/github/open-issues/dotwee/docker-adb-mqtt-bridge?icon=github)
-![github license](https://badgen.net/github/license/dotwee/docker-adb-mqtt-bridge?icon=github)
 ![docker pulls](https://badgen.net/docker/pulls/dotwee/adb-mqtt-bridge?icon=docker&label=pulls)
 
 Control Android devices with MQTT using ADB. 
