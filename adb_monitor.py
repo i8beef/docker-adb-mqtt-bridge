@@ -113,7 +113,7 @@ def on_message(mosq, obj, msg):
     logger.debug("Received MQTT message --> topic: %s - payload: %s" % (msg.topic, msg.payload))
     topicparts = msg.topic.split("/")
     adb_device = topicparts[-2]
-    value = msg.payload.strip()
+    value = str(message.payload.decode("utf-8")).strip()
     logger.debug("Incoming message for device %s -> %s" % (adb_device, value))
 
     if adb_device not in ADB_DEVICES:
