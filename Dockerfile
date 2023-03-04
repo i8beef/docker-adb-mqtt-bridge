@@ -17,8 +17,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY adb_monitor.py .
 RUN apk update && \
     apk add --no-cache android-tools mosquitto-clients jq && \
-    chown -R adb:root /app && chmod -R g+rwX /app && \
-    adduser -D -h /app -u 1000 adb
+    adduser -D -h /app -u 1000 adb && \
+    chown -R adb:root /app && \
+    chmod -R g+rwX /app
 
 USER adb
 
