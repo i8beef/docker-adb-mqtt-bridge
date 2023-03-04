@@ -16,10 +16,15 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY adb_monitor.py .
 RUN apk update && \
-    apk add --no-cache android-tools mosquitto-clients jq
+    apk add --no-cache android-tools mosquitto-clients jq && \
+    mkdir -p /adb && \
+    useradd --home-dir /adb --uid 1000 adb && \
+    chown -R adb:root /adb && chmod -R g+rwX /adb
+
+USER adb
 
 # adb settings must be persistant
 VOLUME [ "/config" ]
-RUN ln -s /config ~/.android
+RUN ln -s /config /adb/.android
 
 CMD [ "python", "./adb_monitor.py" ]
