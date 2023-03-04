@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.9-slim
+FROM python:3.11-alpine
 LABEL maintainer="Lkas Wolfsteiner <lukas@wolfsteiner.media>"
 LABEL org.opencontainers.image.source=https://github.com/dotWee/docker-adb-mqtt-bridge
 

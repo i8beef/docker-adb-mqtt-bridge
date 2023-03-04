@@ -1,28 +1,15 @@
-# [`dotwee/adb-mqtt-bridge`](https://hub.docker.com/r/dotwee/adb-mqtt-bridge)
+![Release](https://github.com/i8beef/docker-adb-mqtt-bridge/actions/workflows/main.yml/badge.svg?branch=master)
 
-![github status](https://img.shields.io/github/workflow/status/dotwee/docker-adb-mqtt-bridge/build%20and%20publish%20docker%20image/master?logo=GitHub)
-![github activity](https://img.shields.io/github/last-commit/dotwee/docker-adb-mqtt-bridge?logo=github)
-![github open issues](https://badgen.net/github/open-issues/dotwee/docker-adb-mqtt-bridge?icon=github)
-![docker pulls](https://badgen.net/docker/pulls/dotwee/adb-mqtt-bridge?icon=docker&label=pulls)
+# i8beef/adb-mqtt-bridge
 
-Control Android devices with MQTT using ADB. 
+Control Android devices with MQTT using ADB. This docker image creates a very basic cli proxy to remote control one or more android devices using MQTT.
 
-This docker image creates a very basic cli proxy to remote control one or more android devices using MQTT.
-
-Based upon [@marcelveldt](https://github.com/marcelveldt)'s initial work on the [docker-image-adb-mqtt-proxy](https://github.com/marcelveldt/docker-image-adb-mqtt-proxy) project.
+This is a fork of [dotWee/docker-adb-mqtt-bridge](https://github.com/dotWee/docker-adb-mqtt-bridge) which updates the base image to `alpine` which uses a more up to date `adb` package.
 
 ## pulling
 
-### from [**docker hub**](https://hub.docker.com/r/dotwee/adb-mqtt-bridge)
-
 ```bash
-$ docker pull dotwee/adb-mqtt-bridge:latest
-```
-
-### from [**github packages**](https://github.com/dotWee/docker-adb-mqtt-bridge/pkgs/container/adb-mqtt-bridge)
-
-```bash
-$ docker pull ghcr.io/dotwee/adb-mqtt-bridge:latest
+$ docker pull ghcr.io/i8beef/adb-mqtt-bridge:latest
 ```
 
 ### available tags
@@ -52,7 +39,7 @@ $ docker run \
     -e TOPIC=AdbMqttBridge \
     -e ADB_DEVICE=192.168.1.45 \
     --restart always \
-    dotwee/adb-mqtt-bridge:latest
+    i8beef/adb-mqtt-bridge:latest
 ```
 
 using [docker-compose](./docker-compose.yml):
@@ -64,7 +51,7 @@ services:
   adb-mqtt-bridge:
     container_name: adb-mqtt-bridge
     hostname: adb-mqtt-bridge
-    image: dotwee/adb-mqtt-bridge:latest
+    image: i8beef/adb-mqtt-bridge:latest
     environment:
       - MQTT_SERVER=192.168.1.55
       - MQTT_PORT=1883
@@ -108,5 +95,3 @@ You can also send shell commands to the command topic
 topic:   AdbMqttBridge/192.168.1.45/cmd
 payload: shell input keyevent KEYCODE_VOLUME_UP
 ```
-
-
